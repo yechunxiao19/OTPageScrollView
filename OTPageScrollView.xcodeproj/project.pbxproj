@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCA186EE197E682500F8994E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186ED197E682500F8994E /* Foundation.framework */; };
+		BCA186F0197E682500F8994E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186EF197E682500F8994E /* CoreGraphics.framework */; };
+		BCA186F2197E682500F8994E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186F1197E682500F8994E /* UIKit.framework */; };
+		BCA186F8197E682500F8994E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCA186F6197E682500F8994E /* InfoPlist.strings */; };
+		BCA186FA197E682500F8994E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA186F9197E682500F8994E /* main.m */; };
+		BCA186FE197E682500F8994E /* OTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA186FD197E682500F8994E /* OTAppDelegate.m */; };
+		BCA18700197E682500F8994E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA186FF197E682500F8994E /* Images.xcassets */; };
+		BCA18707197E682500F8994E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA18706197E682500F8994E /* XCTest.framework */; };
+		BCA18708197E682500F8994E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186ED197E682500F8994E /* Foundation.framework */; };
+		BCA18709197E682500F8994E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186F1197E682500F8994E /* UIKit.framework */; };
+		BCA18711197E682500F8994E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCA1870F197E682500F8994E /* InfoPlist.strings */; };
+		BCA18713197E682500F8994E /* OTPageScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18712197E682500F8994E /* OTPageScrollViewTests.m */; };
+		BCA18721197E689600F8994E /* OTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18720197E689600F8994E /* OTViewController.m */; };
+		BCA18725197E6A7300F8994E /* OTPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18724197E6A7300F8994E /* OTPageScrollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCA1870A197E682500F8994E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCA186E2197E682400F8994E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA186E9197E682500F8994E;
+			remoteInfo = OTPageScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCA186EA197E682500F8994E /* OTPageScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPageScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA186ED197E682500F8994E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BCA186EF197E682500F8994E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BCA186F1197E682500F8994E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BCA186F5197E682500F8994E /* OTPageScrollView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OTPageScrollView-Info.plist"; sourceTree = "<group>"; };
+		BCA186F7197E682500F8994E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCA186F9197E682500F8994E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCA186FB197E682500F8994E /* OTPageScrollView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTPageScrollView-Prefix.pch"; sourceTree = "<group>"; };
+		BCA186FC197E682500F8994E /* OTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTAppDelegate.h; sourceTree = "<group>"; };
+		BCA186FD197E682500F8994E /* OTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTAppDelegate.m; sourceTree = "<group>"; };
+		BCA186FF197E682500F8994E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BCA18705197E682500F8994E /* OTPageScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPageScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCA18706197E682500F8994E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BCA1870E197E682500F8994E /* OTPageScrollViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OTPageScrollViewTests-Info.plist"; sourceTree = "<group>"; };
+		BCA18710197E682500F8994E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCA18712197E682500F8994E /* OTPageScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPageScrollViewTests.m; sourceTree = "<group>"; };
+		BCA1871F197E689600F8994E /* OTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTViewController.h; sourceTree = "<group>"; };
+		BCA18720197E689600F8994E /* OTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTViewController.m; sourceTree = "<group>"; };
+		BCA18723197E6A7300F8994E /* OTPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageScrollView.h; sourceTree = "<group>"; };
+		BCA18724197E6A7300F8994E /* OTPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageScrollView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCA186E7197E682500F8994E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA186F0197E682500F8994E /* CoreGraphics.framework in Frameworks */,
+				BCA186F2197E682500F8994E /* UIKit.framework in Frameworks */,
+				BCA186EE197E682500F8994E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA18702197E682500F8994E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA18707197E682500F8994E /* XCTest.framework in Frameworks */,
+				BCA18709197E682500F8994E /* UIKit.framework in Frameworks */,
+				BCA18708197E682500F8994E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCA186E1197E682400F8994E = {
+			isa = PBXGroup;
+			children = (
+				BCA18722197E68FC00F8994E /* Class */,
+				BCA186F3197E682500F8994E /* OTPageScrollView */,
+				BCA1870C197E682500F8994E /* OTPageScrollViewTests */,
+				BCA186EC197E682500F8994E /* Frameworks */,
+				BCA186EB197E682500F8994E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCA186EB197E682500F8994E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCA186EA197E682500F8994E /* OTPageScrollView.app */,
+				BCA18705197E682500F8994E /* OTPageScrollViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCA186EC197E682500F8994E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCA186ED197E682500F8994E /* Foundation.framework */,
+				BCA186EF197E682500F8994E /* CoreGraphics.framework */,
+				BCA186F1197E682500F8994E /* UIKit.framework */,
+				BCA18706197E682500F8994E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCA186F3197E682500F8994E /* OTPageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				BCA186FC197E682500F8994E /* OTAppDelegate.h */,
+				BCA186FD197E682500F8994E /* OTAppDelegate.m */,
+				BCA186FF197E682500F8994E /* Images.xcassets */,
+				BCA186F4197E682500F8994E /* Supporting Files */,
+				BCA1871F197E689600F8994E /* OTViewController.h */,
+				BCA18720197E689600F8994E /* OTViewController.m */,
+			);
+			path = OTPageScrollView;
+			sourceTree = "<group>";
+		};
+		BCA186F4197E682500F8994E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCA186F5197E682500F8994E /* OTPageScrollView-Info.plist */,
+				BCA186F6197E682500F8994E /* InfoPlist.strings */,
+				BCA186F9197E682500F8994E /* main.m */,
+				BCA186FB197E682500F8994E /* OTPageScrollView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCA1870C197E682500F8994E /* OTPageScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCA18712197E682500F8994E /* OTPageScrollViewTests.m */,
+				BCA1870D197E682500F8994E /* Supporting Files */,
+			);
+			path = OTPageScrollViewTests;
+			sourceTree = "<group>";
+		};
+		BCA1870D197E682500F8994E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1870E197E682500F8994E /* OTPageScrollViewTests-Info.plist */,
+				BCA1870F197E682500F8994E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCA18722197E68FC00F8994E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BCA18723197E6A7300F8994E /* OTPageScrollView.h */,
+				BCA18724197E6A7300F8994E /* OTPageScrollView.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCA186E9197E682500F8994E /* OTPageScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCA18716197E682500F8994E /* Build configuration list for PBXNativeTarget "OTPageScrollView" */;
+			buildPhases = (
+				BCA186E6197E682500F8994E /* Sources */,
+				BCA186E7197E682500F8994E /* Frameworks */,
+				BCA186E8197E682500F8994E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPageScrollView;
+			productName = OTPageScrollView;
+			productReference = BCA186EA197E682500F8994E /* OTPageScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCA18704197E682500F8994E /* OTPageScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCA18719197E682500F8994E /* Build configuration list for PBXNativeTarget "OTPageScrollViewTests" */;
+			buildPhases = (
+				BCA18701197E682500F8994E /* Sources */,
+				BCA18702197E682500F8994E /* Frameworks */,
+				BCA18703197E682500F8994E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCA1870B197E682500F8994E /* PBXTargetDependency */,
+			);
+			name = OTPageScrollViewTests;
+			productName = OTPageScrollViewTests;
+			productReference = BCA18705197E682500F8994E /* OTPageScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCA186E2197E682400F8994E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Oolong Tea";
+				TargetAttributes = {
+					BCA18704197E682500F8994E = {
+						TestTargetID = BCA186E9197E682500F8994E;
+					};
+				};
+			};
+			buildConfigurationList = BCA186E5197E682400F8994E /* Build configuration list for PBXProject "OTPageScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BCA186E1197E682400F8994E;
+			productRefGroup = BCA186EB197E682500F8994E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCA186E9197E682500F8994E /* OTPageScrollView */,
+				BCA18704197E682500F8994E /* OTPageScrollViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCA186E8197E682500F8994E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA186F8197E682500F8994E /* InfoPlist.strings in Resources */,
+				BCA18700197E682500F8994E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA18703197E682500F8994E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA18711197E682500F8994E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCA186E6197E682500F8994E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA186FA197E682500F8994E /* main.m in Sources */,
+				BCA186FE197E682500F8994E /* OTAppDelegate.m in Sources */,
+				BCA18721197E689600F8994E /* OTViewController.m in Sources */,
+				BCA18725197E6A7300F8994E /* OTPageScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCA18701197E682500F8994E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA18713197E682500F8994E /* OTPageScrollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCA1870B197E682500F8994E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA186E9197E682500F8994E /* OTPageScrollView */;
+			targetProxy = BCA1870A197E682500F8994E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCA186F6197E682500F8994E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCA186F7197E682500F8994E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BCA1870F197E682500F8994E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCA18710197E682500F8994E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCA18714197E682500F8994E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCA18715197E682500F8994E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCA18717197E682500F8994E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTPageScrollView/OTPageScrollView-Prefix.pch";
+				INFOPLIST_FILE = "OTPageScrollView/OTPageScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BCA18718197E682500F8994E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTPageScrollView/OTPageScrollView-Prefix.pch";
+				INFOPLIST_FILE = "OTPageScrollView/OTPageScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BCA1871A197E682500F8994E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OTPageScrollView.app/OTPageScrollView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTPageScrollView/OTPageScrollView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OTPageScrollViewTests/OTPageScrollViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BCA1871B197E682500F8994E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OTPageScrollView.app/OTPageScrollView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTPageScrollView/OTPageScrollView-Prefix.pch";
+				INFOPLIST_FILE = "OTPageScrollViewTests/OTPageScrollViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCA186E5197E682400F8994E /* Build configuration list for PBXProject "OTPageScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA18714197E682500F8994E /* Debug */,
+				BCA18715197E682500F8994E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCA18716197E682500F8994E /* Build configuration list for PBXNativeTarget "OTPageScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA18717197E682500F8994E /* Debug */,
+				BCA18718197E682500F8994E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCA18719197E682500F8994E /* Build configuration list for PBXNativeTarget "OTPageScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA1871A197E682500F8994E /* Debug */,
+				BCA1871B197E682500F8994E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCA186E2197E682400F8994E /* Project object */;
+}
