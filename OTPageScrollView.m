@@ -10,7 +10,7 @@
 
 @interface OTPageScrollView()<UIScrollViewDelegate>
 
-@property (nonatomic, strong)   UIScrollView * scrollView;
+//@property (nonatomic, strong)   UIScrollView * scrollView;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @property (nonatomic, strong)   NSMutableArray * viewsInPage;
 
@@ -37,6 +37,13 @@
 {
     _padding = 10;
     self.clipsToBounds = YES;
+    self.showsHorizontalScrollIndicator = NO;
+    self.showsVerticalScrollIndicator = NO;
+    self.autoresizesSubviews = NO;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.multipleTouchEnabled = NO;
+    self.decelerationRate = UIScrollViewDecelerationRateFast;
+    [self addGestureRecognizer:self.tapGesture];
 }
 
 - (void)reloadData
@@ -58,7 +65,7 @@
     float startX = self.leftRightOffset;
     float topY   = (self.frame.size.height - _cellSize.height)/2;
     
-    [[self.scrollView subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    [[self subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
     
     self.viewsInPage = nil;
     self.viewsInPage = [NSMutableArray array];
@@ -66,13 +73,13 @@
     for (int i = 0; i < _numberOfCell; i ++) {
         UIView * cell = [self.dataSource pageScrollView:self viewForRowAtIndex:i];
         cell.frame = CGRectMake(startX, topY, _cellSize.width, _cellSize.height);
-        [self.scrollView addSubview:cell];
+        [self addSubview:cell];
         startX += self.padding + _cellSize.width;
         [self.viewsInPage addObject:cell];
     }
     
     float scrollViewSizeWith = startX - self.padding + (self.frame.size.width - _cellSize.width)/2;
-    self.scrollView.contentSize = CGSizeMake(scrollViewSizeWith, 1);
+    self.contentSize = CGSizeMake(scrollViewSizeWith, 1);
 }
 
 - (UIView*)viewForRowAtIndex:(NSInteger)index
@@ -101,28 +108,11 @@
 - (UITapGestureRecognizer*)tapGesture
 {
     if (!_tapGesture) {
-        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
         [_tapGesture setNumberOfTapsRequired:1];
         [_tapGesture setNumberOfTouchesRequired:1];
     }
     return _tapGesture;
-}
-
-- (UIScrollView*)scrollView
-{
-    if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.showsVerticalScrollIndicator = NO;
-        _scrollView.autoresizesSubviews = NO;
-        _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _scrollView.multipleTouchEnabled = NO;
-        _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
-        _scrollView.delegate = self;
-        [_scrollView addGestureRecognizer:self.tapGesture];
-        [self addSubview:_scrollView];
-    }
-    return _scrollView;
 }
 
 - (float)leftRightOffset
@@ -132,27 +122,17 @@
 
 #pragma mark - Action
 
-- (void)handlePanGesture:(UITapGestureRecognizer*)tapGesture
+- (void)handleTapGesture:(UITapGestureRecognizer*)tapGesture
 {
     CGPoint tapPoint = [tapGesture locationInView:self];
     
     float topY   = (self.frame.size.height - _cellSize.height)/2;
     BOOL yInCell = NO;
     if(tapPoint.y > topY && tapPoint.y < self.frame.size.height-topY) yInCell = YES;
-    int xInCellNumber = (_scrollView.contentOffset.x + tapPoint.x - self.leftRightOffset)/(_cellSize.width + self.padding) + 1;
-    if (yInCell) {
+    int xInCellNumber = (tapPoint.x - self.leftRightOffset)/(_cellSize.width + self.padding) + 1;
+    if (yInCell && xInCellNumber>0) {
         [self.delegate pageScrollView:self didTapPageAtIndex:xInCellNumber];
     }
-}
-
-#pragma mark - Clean up
-
-- (void)dealloc
-{
-    _viewsInPage = nil;
-    [[self.scrollView subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
-    [self.scrollView removeFromSuperview];
-    self.scrollView = nil;
 }
 
 
