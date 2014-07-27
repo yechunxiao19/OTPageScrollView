@@ -34,7 +34,6 @@
 
 - (void)initializeValue
 {
-    _padding = 10;
     self.clipsToBounds = YES;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
@@ -99,11 +98,6 @@
     return _viewsInPage;
 }
 
-- (void)setPadding:(CGFloat)padding
-{
-    [self reloadData];
-}
-
 - (UITapGestureRecognizer*)tapGesture
 {
     if (!_tapGesture) {
@@ -116,7 +110,17 @@
 
 - (float)leftRightOffset
 {
-    return (self.frame.size.width - _cellSize.width)/2;
+    if (!_leftRightOffset) {
+        return (self.frame.size.width - _cellSize.width)/2;
+    }
+    return _leftRightOffset;
+}
+
+- (CGFloat)padding{
+    if (!_padding) {
+        return 10;
+    }
+    return _padding;
 }
 
 #pragma mark - Action
@@ -127,9 +131,16 @@
     
     float topY   = (self.frame.size.height - _cellSize.height)/2;
     BOOL yInCell = NO;
-    if(tapPoint.y > topY && tapPoint.y < self.frame.size.height-topY) yInCell = YES;
+    if (tapPoint.y > topY && tapPoint.y < self.frame.size.height-topY){
+        yInCell = YES;
+    }
     int xInCellNumber = (tapPoint.x - self.leftRightOffset)/(_cellSize.width + self.padding) + 1;
-    if (yInCell && xInCellNumber>0) {
+    BOOL xInCell = NO;
+    if (tapPoint.x > self.leftRightOffset + ((_cellSize.width + self.padding) * (xInCellNumber - 1))
+        && tapPoint.x < self.leftRightOffset + ((_cellSize.width + self.padding) * (xInCellNumber - 1)) + _cellSize.width) {
+        xInCell = YES;
+    }
+    if (yInCell && xInCell) {
         [self.delegate pageScrollView:self didTapPageAtIndex:xInCellNumber];
     }
 }

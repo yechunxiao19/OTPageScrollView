@@ -25,8 +25,8 @@
 
 @interface OTPageScrollView : UIScrollView
 
-@property (nonatomic) CGFloat   padding;
-@property (nonatomic) float     leftRightOffset;
+@property (nonatomic) CGFloat padding;
+@property (nonatomic) float leftRightOffset;
 
 @property (nonatomic, assign) id<OTPageScrollViewDataSource> dataSource;
 @property (nonatomic, assign) id<OTPageScrollViewDelegate> delegate;

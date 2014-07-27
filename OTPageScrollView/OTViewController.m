@@ -32,20 +32,22 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
     
-    OTPageScrollView *PScrollView = [[OTPageScrollView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    OTPageScrollView *PScrollView = [[OTPageScrollView alloc] initWithFrame:CGRectMake(0, 60, 320, 200)];
     PScrollView.dataSource = self;
     PScrollView.delegate = self;
+    PScrollView.padding =50;
+    PScrollView.leftRightOffset = 10;
     PScrollView.backgroundColor = [UIColor redColor];
     _dataArray = [NSArray arrayWithObjects:
-                          @"Google",
-                          @"百　度",
-                          @"网　易",
-                          @"微 博",
-                          @"优 酷 网",
-                          @"淘 宝 网",
-                          @"亚 马 逊",
-                          @"MSN中文网",
-                          @"猫　扑", @"123",nil];
+                          @"1 Google",
+                          @"2 百　度",
+                          @"3 网　易",
+                          @"4 微 博",
+                          @"5 优 酷 网",
+                          @"6 淘 宝 网",
+                          @"7 亚 马 逊",
+                          @"8 MSN中文网",
+                          @"9 猫　扑", @"10 123",nil];
      [PScrollView reloadData];
      [self.view addSubview:PScrollView];
 }
