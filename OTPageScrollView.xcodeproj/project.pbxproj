@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C437CFD198F7DD000C56A05 /* OTPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C437CFC198F7DD000C56A05 /* OTPageCell.m */; };
 		BCA186EE197E682500F8994E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186ED197E682500F8994E /* Foundation.framework */; };
 		BCA186F0197E682500F8994E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186EF197E682500F8994E /* CoreGraphics.framework */; };
 		BCA186F2197E682500F8994E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186F1197E682500F8994E /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C437CFB198F7DD000C56A05 /* OTPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageCell.h; sourceTree = "<group>"; };
+		0C437CFC198F7DD000C56A05 /* OTPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageCell.m; sourceTree = "<group>"; };
 		BCA186EA197E682500F8994E /* OTPageScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPageScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA186ED197E682500F8994E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BCA186EF197E682500F8994E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +161,8 @@
 			children = (
 				BCA18723197E6A7300F8994E /* OTPageScrollView.h */,
 				BCA18724197E6A7300F8994E /* OTPageScrollView.m */,
+				0C437CFB198F7DD000C56A05 /* OTPageCell.h */,
+				0C437CFC198F7DD000C56A05 /* OTPageCell.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA186FA197E682500F8994E /* main.m in Sources */,
+				0C437CFD198F7DD000C56A05 /* OTPageCell.m in Sources */,
 				BCA186FE197E682500F8994E /* OTAppDelegate.m in Sources */,
 				BCA18721197E689600F8994E /* OTViewController.m in Sources */,
 				BCA18725197E6A7300F8994E /* OTPageScrollView.m in Sources */,
@@ -458,6 +464,7 @@
 				BCA18718197E682500F8994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCA18719197E682500F8994E /* Build configuration list for PBXNativeTarget "OTPageScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +473,7 @@
 				BCA1871B197E682500F8994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

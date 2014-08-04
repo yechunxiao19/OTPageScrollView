@@ -2,7 +2,7 @@
 //  OTAppDelegate.m
 //  OTPageScrollView
 //
-//  Created by akron on 7/22/14.
+//  Created by yechunxiao on 7/22/14.
 //  Copyright (c) 2014 Oolong Tea. All rights reserved.
 //
 
