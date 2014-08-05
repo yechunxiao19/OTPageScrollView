@@ -25,11 +25,16 @@
 
 @interface OTPageScrollView : UIScrollView
 
-@property (nonatomic) CGFloat padding;
-@property (nonatomic) float leftRightOffset;
+@property (nonatomic, assign) CGFloat padding;
+@property (nonatomic, assign) float leftRightOffset;
+@property (nonatomic, strong) UIImageView* backgroundView;
+@property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, strong) NSArray* visibleCell;
+@property (nonatomic, strong) NSMutableSet* cacheCells;
+@property (nonatomic, strong) NSMutableDictionary* visibleCellsMap;
 
-@property (nonatomic, assign) id<OTPageScrollViewDataSource> dataSource;
-@property (nonatomic, assign) id<OTPageScrollViewDelegate> delegate;
+@property (nonatomic, weak) id<OTPageScrollViewDataSource> dataSource;
+@property (nonatomic, weak) id<OTPageScrollViewDelegate> delegate;
 
 - (void)reloadData;
 - (UIView*)viewForRowAtIndex:(NSInteger)index;

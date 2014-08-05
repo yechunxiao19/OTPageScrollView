@@ -11,7 +11,8 @@
 @interface OTPageScrollView()
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
-@property (nonatomic, strong)   NSMutableArray * viewsInPage;
+@property (nonatomic, strong) NSMutableArray * viewsInPage;
+@property (nonatomic, assign) NSInteger numberOfCells;
 
 @end
 
@@ -78,6 +79,27 @@
     
     float scrollViewSizeWith = startX - self.padding + (self.frame.size.width - _cellSize.width)/2;
     self.contentSize = CGSizeMake(scrollViewSizeWith, 1);
+}
+
+- (void) reduceContentSize
+{
+    _numberOfCells = [self.delegate numberOfPageInPageScrollView:self];
+//    _cellYOffsets = DZCellYoffsetMap();
+//    _cellHeights = DZCellHeightVector();
+//    float height = 0;
+//    for (int i = 0  ; i < _numberOfCells; i ++) {
+//        float cellHeight = (_dataSourceReponse.funcHeightRow? [_dataSource dzTableView:self cellHeightAtRow:i] : kDZTableViewDefaultHeight);
+//        _cellHeights.push_back(cellHeight);
+//        height += cellHeight;
+//        _cellYOffsets.insert(pair<int, float>(i, height));
+//    }
+//    if (height < CGRectGetHeight(self.frame)) {
+//        height = CGRectGetHeight(self.frame) + 2;
+//    }
+//    height += 10;
+//    CGSize size = CGSizeMake(CGRectGetWidth(self.frame), height);
+    
+//    [self setContentSize:size];
 }
 
 - (UIView*)viewForRowAtIndex:(NSInteger)index
