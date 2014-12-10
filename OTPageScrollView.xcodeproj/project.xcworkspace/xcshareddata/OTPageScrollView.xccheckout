@@ -10,29 +10,29 @@
 	<string>OTPageScrollView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DE254286-9E64-4165-BC08-76AA2BA53914</key>
+		<key>24D72B8D12E83B673201C26DD66AF2E689D0D523</key>
 		<string>https://github.com/yechunxiao19/OTPageScrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OTPageScrollView.xcodeproj/project.xcworkspace</string>
+	<string>OTPageScrollView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DE254286-9E64-4165-BC08-76AA2BA53914</key>
+		<key>24D72B8D12E83B673201C26DD66AF2E689D0D523</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yechunxiao19/OTPageScrollView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DE254286-9E64-4165-BC08-76AA2BA53914</string>
+	<string>24D72B8D12E83B673201C26DD66AF2E689D0D523</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DE254286-9E64-4165-BC08-76AA2BA53914</string>
+			<string>24D72B8D12E83B673201C26DD66AF2E689D0D523</string>
 			<key>IDESourceControlWCCName</key>
 			<string>OTPageScrollView</string>
 		</dict>

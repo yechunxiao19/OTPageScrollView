@@ -8,6 +8,7 @@
 
 #import "OTViewController.h"
 #import "OTPageScrollView.h"
+#import "OTPageView.h"
 
 @interface OTViewController ()<OTPageScrollViewDataSource,OTPageScrollViewDelegate>
 
@@ -32,11 +33,13 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
     
-    OTPageScrollView *PScrollView = [[OTPageScrollView alloc] initWithFrame:CGRectMake(0, 60, 320, 200)];
-    PScrollView.dataSource = self;
-    PScrollView.delegate = self;
-    PScrollView.padding =50;
-    PScrollView.leftRightOffset = 10;
+    OTPageView *PScrollView = [[OTPageView alloc] initWithFrame:CGRectMake(0, 60, 320, 200)];
+    PScrollView.pageScrollView.dataSource = self;
+    PScrollView.pageScrollView.delegate = self;
+    PScrollView.pageScrollView.padding =50;
+    PScrollView.pageScrollView.leftRightOffset = 10;
+    PScrollView.pageScrollView.pageScrollViewType = OTPageScrollViewTypeCenter;
+    PScrollView.pageScrollView.frame = CGRectMake(85, 60, 150, 100);
     PScrollView.backgroundColor = [UIColor redColor];
     _dataArray = [NSArray arrayWithObjects:
                           @"1 Google",
@@ -48,8 +51,11 @@
                           @"7 亚 马 逊",
                           @"8 MSN中文网",
                           @"9 猫　扑", @"10 123",nil];
-     [PScrollView reloadData];
+     [PScrollView.pageScrollView reloadData];
      [self.view addSubview:PScrollView];
+    UIView *arrowView = [[UIView alloc] initWithFrame:CGRectMake(158, 260, 4, 10)];
+    arrowView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:arrowView];
 }
 
 - (NSInteger)numberOfPageInPageScrollView:(OTPageScrollView*)pageScrollView{
@@ -71,7 +77,7 @@
 }
 
 - (void)pageScrollView:(OTPageScrollView *)pageScrollView didTapPageAtIndex:(NSInteger)index{
-    NSLog(@"你点击了第%d个cell",index);
+    NSLog(@"你点击了第%ld个cell",index);
 }
 
 - (void)didReceiveMemoryWarning

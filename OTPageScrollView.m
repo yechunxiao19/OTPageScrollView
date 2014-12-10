@@ -17,9 +17,7 @@
 @end
 
 @implementation OTPageScrollView{
-    CGSize    _cellSize;
     NSInteger _numberOfCell;
-    
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -36,6 +34,7 @@
 - (void)initializeValue
 {
     self.clipsToBounds = YES;
+    self.pageScrollViewType = OTPageScrollViewTypeNormal;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
     self.autoresizesSubviews = NO;
@@ -81,27 +80,6 @@
     self.contentSize = CGSizeMake(scrollViewSizeWith, 1);
 }
 
-- (void) reduceContentSize
-{
-    _numberOfCells = [self.delegate numberOfPageInPageScrollView:self];
-//    _cellYOffsets = DZCellYoffsetMap();
-//    _cellHeights = DZCellHeightVector();
-//    float height = 0;
-//    for (int i = 0  ; i < _numberOfCells; i ++) {
-//        float cellHeight = (_dataSourceReponse.funcHeightRow? [_dataSource dzTableView:self cellHeightAtRow:i] : kDZTableViewDefaultHeight);
-//        _cellHeights.push_back(cellHeight);
-//        height += cellHeight;
-//        _cellYOffsets.insert(pair<int, float>(i, height));
-//    }
-//    if (height < CGRectGetHeight(self.frame)) {
-//        height = CGRectGetHeight(self.frame) + 2;
-//    }
-//    height += 10;
-//    CGSize size = CGSizeMake(CGRectGetWidth(self.frame), height);
-    
-//    [self setContentSize:size];
-}
-
 - (UIView*)viewForRowAtIndex:(NSInteger)index
 {
     if (index < self.viewsInPage.count) {
@@ -135,6 +113,9 @@
     if (!_leftRightOffset) {
         return (self.frame.size.width - _cellSize.width)/2;
     }
+//    if (self.pageScrollViewType == OTPageScrollViewTypeCenter) {
+//        return [[UIScreen mainScreen] bounds].size.width/2 - _cellSize.width/2;
+//    }
     return _leftRightOffset;
 }
 
@@ -164,8 +145,10 @@
     }
     if (yInCell && xInCell) {
         [self.delegate pageScrollView:self didTapPageAtIndex:xInCellNumber];
+        if (self.pageScrollViewType == OTPageScrollViewTypeCenter) {
+            [self setContentOffset:CGPointMake((_cellSize.width + self.padding) * (xInCellNumber - 1), 0) animated:YES];
+        }
     }
 }
-
 
 @end
