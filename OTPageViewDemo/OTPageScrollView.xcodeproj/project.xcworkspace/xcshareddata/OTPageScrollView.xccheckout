@@ -14,11 +14,11 @@
 		<string>https://github.com/yechunxiao19/OTPageScrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OTPageScrollView.xcodeproj</string>
+	<string>OTPageViewDemo/OTPageScrollView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>24D72B8D12E83B673201C26DD66AF2E689D0D523</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yechunxiao19/OTPageScrollView.git</string>

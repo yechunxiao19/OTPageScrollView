@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C437CFD198F7DD000C56A05 /* OTPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C437CFC198F7DD000C56A05 /* OTPageCell.m */; };
-		0CD3B73E1A37F8C400757748 /* OTPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3B73D1A37F8C400757748 /* OTPageView.m */; };
+		0CBE02DF1A5296BC00B8A78B /* OTPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE02DC1A5296BC00B8A78B /* OTPageScrollView.m */; };
+		0CBE02E01A5296BC00B8A78B /* OTPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE02DE1A5296BC00B8A78B /* OTPageView.m */; };
 		BCA186EE197E682500F8994E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186ED197E682500F8994E /* Foundation.framework */; };
 		BCA186F0197E682500F8994E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186EF197E682500F8994E /* CoreGraphics.framework */; };
 		BCA186F2197E682500F8994E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA186F1197E682500F8994E /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		BCA18711197E682500F8994E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCA1870F197E682500F8994E /* InfoPlist.strings */; };
 		BCA18713197E682500F8994E /* OTPageScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18712197E682500F8994E /* OTPageScrollViewTests.m */; };
 		BCA18721197E689600F8994E /* OTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18720197E689600F8994E /* OTViewController.m */; };
-		BCA18725197E6A7300F8994E /* OTPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA18724197E6A7300F8994E /* OTPageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,10 @@
 /* Begin PBXFileReference section */
 		0C437CFB198F7DD000C56A05 /* OTPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageCell.h; sourceTree = "<group>"; };
 		0C437CFC198F7DD000C56A05 /* OTPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageCell.m; sourceTree = "<group>"; };
-		0CD3B73C1A37F8C400757748 /* OTPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageView.h; sourceTree = "<group>"; };
-		0CD3B73D1A37F8C400757748 /* OTPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageView.m; sourceTree = "<group>"; };
+		0CBE02DB1A5296BC00B8A78B /* OTPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageScrollView.h; sourceTree = "<group>"; };
+		0CBE02DC1A5296BC00B8A78B /* OTPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageScrollView.m; sourceTree = "<group>"; };
+		0CBE02DD1A5296BC00B8A78B /* OTPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageView.h; sourceTree = "<group>"; };
+		0CBE02DE1A5296BC00B8A78B /* OTPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageView.m; sourceTree = "<group>"; };
 		BCA186EA197E682500F8994E /* OTPageScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPageScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA186ED197E682500F8994E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BCA186EF197E682500F8994E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,8 +60,6 @@
 		BCA18712197E682500F8994E /* OTPageScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPageScrollViewTests.m; sourceTree = "<group>"; };
 		BCA1871F197E689600F8994E /* OTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTViewController.h; sourceTree = "<group>"; };
 		BCA18720197E689600F8994E /* OTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTViewController.m; sourceTree = "<group>"; };
-		BCA18723197E6A7300F8994E /* OTPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPageScrollView.h; sourceTree = "<group>"; };
-		BCA18724197E6A7300F8994E /* OTPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,12 +162,12 @@
 		BCA18722197E68FC00F8994E /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				BCA18723197E6A7300F8994E /* OTPageScrollView.h */,
-				BCA18724197E6A7300F8994E /* OTPageScrollView.m */,
+				0CBE02DB1A5296BC00B8A78B /* OTPageScrollView.h */,
+				0CBE02DC1A5296BC00B8A78B /* OTPageScrollView.m */,
+				0CBE02DD1A5296BC00B8A78B /* OTPageView.h */,
+				0CBE02DE1A5296BC00B8A78B /* OTPageView.m */,
 				0C437CFB198F7DD000C56A05 /* OTPageCell.h */,
 				0C437CFC198F7DD000C56A05 /* OTPageCell.m */,
-				0CD3B73C1A37F8C400757748 /* OTPageView.h */,
-				0CD3B73D1A37F8C400757748 /* OTPageView.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -270,10 +270,10 @@
 			files = (
 				BCA186FA197E682500F8994E /* main.m in Sources */,
 				0C437CFD198F7DD000C56A05 /* OTPageCell.m in Sources */,
+				0CBE02DF1A5296BC00B8A78B /* OTPageScrollView.m in Sources */,
 				BCA186FE197E682500F8994E /* OTAppDelegate.m in Sources */,
+				0CBE02E01A5296BC00B8A78B /* OTPageView.m in Sources */,
 				BCA18721197E689600F8994E /* OTViewController.m in Sources */,
-				0CD3B73E1A37F8C400757748 /* OTPageView.m in Sources */,
-				BCA18725197E6A7300F8994E /* OTPageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,13 +76,13 @@
 }
 
 - (void)pageScrollView:(OTPageScrollView *)pageScrollView didTapPageAtIndex:(NSInteger)index{
-    NSLog(@"你点击了第%ld个cell",index);
+    NSLog(@"click cell at %ld",index);
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
-    NSLog(@"你点击了第%ld个cell",index);
+    NSLog(@"click cell at %ld",index);
 }
 
 - (void)didReceiveMemoryWarning

@@ -15,7 +15,6 @@
 @optional
 - (CGSize)sizeCellForPageScrollView:(OTPageScrollView*)pageScrollView;
 - (void)pageScrollView:(OTPageScrollView *)pageScrollView didTapPageAtIndex:(NSInteger)index;
-
 @end
 
 @protocol OTPageScrollViewDataSource <UIScrollViewDelegate>
