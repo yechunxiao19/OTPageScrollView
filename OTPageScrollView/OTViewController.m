@@ -31,30 +31,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
     
-    OTPageView *PScrollView = [[OTPageView alloc] initWithFrame:CGRectMake(0, 60, 320, 200)];
+    OTPageView *PScrollView = [[OTPageView alloc] initWithFrame:CGRectMake(0, 60, [[UIScreen mainScreen] bounds].size.width, 200)];
     PScrollView.pageScrollView.dataSource = self;
     PScrollView.pageScrollView.delegate = self;
     PScrollView.pageScrollView.padding =50;
-    PScrollView.pageScrollView.leftRightOffset = 10;
-    PScrollView.pageScrollView.pageScrollViewType = OTPageScrollViewTypeCenter;
-    PScrollView.pageScrollView.frame = CGRectMake(85, 60, 150, 100);
-    PScrollView.backgroundColor = [UIColor redColor];
+    PScrollView.pageScrollView.leftRightOffset = 0;
+    PScrollView.pageScrollView.frame = CGRectMake(([[UIScreen mainScreen] bounds].size.width -150)/2, 60, 150, 100);
+    PScrollView.backgroundColor = [UIColor colorWithRed:239.0f/255.0f green:79.0f/255.0f blue:104.0f/255.0f alpha:1.0f];
     _dataArray = [NSArray arrayWithObjects:
-                          @"1 Google",
-                          @"2 百　度",
-                          @"3 网　易",
-                          @"4 微 博",
-                          @"5 优 酷 网",
-                          @"6 淘 宝 网",
-                          @"7 亚 马 逊",
-                          @"8 MSN中文网",
-                          @"9 猫　扑", @"10 123",nil];
+                          @"0 Google",
+                          @"1 Yahoo",
+                          @"2 Facebook",
+                          @"3 Twitter",
+                          @"4 Amazon",
+                          @"5 microsoft",
+                          @"6 evernote",
+                          @"7 MSN",
+                          @"8 abc",
+                          @"9 123",nil];
      [PScrollView.pageScrollView reloadData];
      [self.view addSubview:PScrollView];
-    UIView *arrowView = [[UIView alloc] initWithFrame:CGRectMake(158, 260, 4, 10)];
-    arrowView.backgroundColor = [UIColor redColor];
+    UIView *arrowView = [[UIView alloc] initWithFrame:CGRectMake([[UIScreen mainScreen] bounds].size.width/2-2, 260, 4, 10)];
+    arrowView.backgroundColor = [UIColor colorWithRed:239.0f/255.0f green:79.0f/255.0f blue:104.0f/255.0f alpha:1.0f];
     [self.view addSubview:arrowView];
 }
 
@@ -77,6 +76,12 @@
 }
 
 - (void)pageScrollView:(OTPageScrollView *)pageScrollView didTapPageAtIndex:(NSInteger)index{
+    NSLog(@"你点击了第%ld个cell",index);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
     NSLog(@"你点击了第%ld个cell",index);
 }
 

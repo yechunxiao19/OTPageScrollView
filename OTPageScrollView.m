@@ -12,13 +12,11 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @property (nonatomic, strong) NSMutableArray * viewsInPage;
-@property (nonatomic, assign) NSInteger numberOfCells;
+@property (nonatomic, assign) NSInteger numberOfCell;
 
 @end
 
-@implementation OTPageScrollView{
-    NSInteger _numberOfCell;
-}
+@implementation OTPageScrollView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,7 +32,6 @@
 - (void)initializeValue
 {
     self.clipsToBounds = YES;
-    self.pageScrollViewType = OTPageScrollViewTypeNormal;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
     self.autoresizesSubviews = NO;
@@ -137,17 +134,18 @@
     if (tapPoint.y > topY && tapPoint.y < self.frame.size.height-topY){
         yInCell = YES;
     }
-    int xInCellNumber = (tapPoint.x - self.leftRightOffset)/(_cellSize.width + self.padding) + 1;
+    int xInCellNumber = (tapPoint.x - self.leftRightOffset)/(_cellSize.width + self.padding);
     BOOL xInCell = NO;
-    if (tapPoint.x > self.leftRightOffset + ((_cellSize.width + self.padding) * (xInCellNumber - 1))
-        && tapPoint.x < self.leftRightOffset + ((_cellSize.width + self.padding) * (xInCellNumber - 1)) + _cellSize.width) {
+    if (tapPoint.x > self.leftRightOffset + ((_cellSize.width + self.padding) * xInCellNumber)
+        && tapPoint.x < self.leftRightOffset + ((_cellSize.width + self.padding) * xInCellNumber) + _cellSize.width) {
         xInCell = YES;
+    }
+    if (xInCellNumber < 0 || xInCellNumber >= _numberOfCell) {
+        xInCell = NO;
     }
     if (yInCell && xInCell) {
         [self.delegate pageScrollView:self didTapPageAtIndex:xInCellNumber];
-        if (self.pageScrollViewType == OTPageScrollViewTypeCenter) {
-            [self setContentOffset:CGPointMake((_cellSize.width + self.padding) * (xInCellNumber - 1), 0) animated:YES];
-        }
+        [self setContentOffset:CGPointMake((_cellSize.width + self.padding) * xInCellNumber , 0) animated:YES];
     }
 }
 

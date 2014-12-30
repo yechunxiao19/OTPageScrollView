@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, OTPageScrollViewType){
-    OTPageScrollViewTypeNormal = 0,
-    OTPageScrollViewTypeCenter = 1,
-};
-
 @class OTPageScrollView;
 @protocol OTPageScrollViewDelegate <UIScrollViewDelegate>
 @required
@@ -39,7 +34,7 @@ typedef NS_ENUM(NSUInteger, OTPageScrollViewType){
 @property (nonatomic, strong) NSArray* visibleCell;
 @property (nonatomic, strong) NSMutableSet* cacheCells;
 @property (nonatomic, strong) NSMutableDictionary* visibleCellsMap;
-@property (nonatomic, assign) OTPageScrollViewType pageScrollViewType;
+@property (nonatomic, assign) CGFloat pageViewWith;
 
 @property (nonatomic, weak) id<OTPageScrollViewDataSource> dataSource;
 @property (nonatomic, weak) id<OTPageScrollViewDelegate> delegate;

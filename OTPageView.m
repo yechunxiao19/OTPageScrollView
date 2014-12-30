@@ -17,6 +17,7 @@
         self.pageScrollView = [[OTPageScrollView alloc] init];
         [self.pageScrollView setPagingEnabled:YES];
         [self.pageScrollView setClipsToBounds:NO];
+        self.pageScrollView.pageViewWith = self.frame.size.width;
         [self addSubview:self.pageScrollView];
     }
     return self;
