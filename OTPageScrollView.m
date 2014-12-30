@@ -110,9 +110,6 @@
     if (!_leftRightOffset) {
         return (self.frame.size.width - _cellSize.width)/2;
     }
-//    if (self.pageScrollViewType == OTPageScrollViewTypeCenter) {
-//        return [[UIScreen mainScreen] bounds].size.width/2 - _cellSize.width/2;
-//    }
     return _leftRightOffset;
 }
 
@@ -144,8 +141,11 @@
         xInCell = NO;
     }
     if (yInCell && xInCell) {
+        self.selectedIndex = xInCellNumber;
         [self.delegate pageScrollView:self didTapPageAtIndex:xInCellNumber];
-        [self setContentOffset:CGPointMake((_cellSize.width + self.padding) * xInCellNumber , 0) animated:YES];
+        [UIView animateWithDuration:0.3 animations:^{
+            [self setContentOffset:CGPointMake((_cellSize.width + self.padding) * xInCellNumber, 0)];
+        }];
     }
 }
 
